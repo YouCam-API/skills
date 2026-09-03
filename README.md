@@ -8,6 +8,29 @@ try on this jacket". Every skill also runs on its own from the command line thro
 `scripts/youcam_core.py`, so nothing stops you from calling it directly instead of going through
 an agent.
 
+## Installing
+
+If your agent host supports the [Skills CLI](https://github.com/vercel-labs/skills), install straight
+from GitHub:
+
+```
+npx skills add YouCam-API/skills
+```
+
+This lists the six skills in this repo and lets you pick which ones to add, then which of your
+installed agents (Claude Code, Cursor, etc.) to add them to. To skip the prompts, add specific
+skills and/or a specific agent directly:
+
+```
+npx skills add YouCam-API/skills --skill skin-analysis-expert -a claude-code
+```
+
+or install everything, to every detected agent:
+
+```
+npx skills add YouCam-API/skills --all
+```
+
 ## Before you start
 
 - Python 3, with pip.
